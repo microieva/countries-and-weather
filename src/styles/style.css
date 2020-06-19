@@ -1,0 +1,133 @@
+@import './country-component.scss';
+@import './weather-component.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arvo', sans-serif;
+    font-weight: bolder;
+    color: #333;
+
+}
+
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+/* ======================================== TOP SECTION ============================================= */
+
+.top-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+/* ---------------------------- titles -------------------------- */
+
+.titles {
+    background: darkgray;
+}
+
+.titles>h1 {
+    font-size: 3em;
+    color: #F2A93B;
+    font-weight: 900;
+}
+
+.titles>p {
+    color: #5a5a5a;
+    font-size: 1.5rem;
+}
+
+.ui-container {
+    background: #F7F7F7;
+}
+
+input {
+    min-width: 50%;
+    border-radius: 30px;
+    border: 1px solid orange;
+    outline: none;
+    height: 2.5rem;
+    text-indent: 1.5rem;
+    margin-top: 2rem;
+    color: #F2A93B;
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: 1px 1px 40px 2px darkgray;
+}
+
+input:hover {
+    box-shadow: none;
+}
+
+::placeholder {
+    color: lightgrey;
+    font-size: 1rem;
+}
+
+button {
+    background: #F2A93B;
+    color: #5a5a5a;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    height: 2.5rem;
+    min-width: 12%;
+    margin: 2rem 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    box-shadow: 1px 1px 40px 2px darkgray;
+}
+
+button:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    background: white;
+}
+
+.btn {
+    height: 4rem;
+    min-width: 4.2rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/* =========================================== DISPLAY SECTION ============================================ */
+
+.display-container {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background: #EFECEF;
+}
+
+.weather-container {
+    min-width:100%;
+    background: #EFECEF;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: normal;
+    color: #F2A93B;
+    font-size: 1em; 
+}
+
+spam {
+    color: #5a5a5a;
+    padding:0 5px 0 0;
+}
+

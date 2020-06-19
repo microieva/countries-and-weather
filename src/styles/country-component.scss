@@ -1,0 +1,46 @@
+.countries-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-width: 100%;
+    padding: 5rem 0;
+
+}
+
+.country {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 250px;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    background: #F7F7F7;
+    border-radius: 10px;
+    border: 1px solid orange;
+    box-shadow: 2px 2px 20px 2px darkgray;
+}
+
+.flag {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 100%;
+    margin:5px 0;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.country-info {
+    padding:0 1.5rem;
+    color: orange;
+    text-align: left;
+}
+
