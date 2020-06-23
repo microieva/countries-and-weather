@@ -41,7 +41,6 @@ class WeatherComponent extends Component {
         const {
             name, 
             description, 
-            icon, 
             speed, 
             temp, 
             temp_min, 
@@ -59,11 +58,7 @@ class WeatherComponent extends Component {
                         <p>Description: <spam>{description}</spam></p>
                         <p>Wind speed: <spam>{speed} m/s</spam></p>
                         <p>Min/Max: <spam>{Math.floor(temp_min/10)}/{Math.floor(temp_max/10)} °C</spam></p>
-                    </div>
-                   
-                        
-                       
-                    
+                    </div>    
                 </div>
             </div>
         )
