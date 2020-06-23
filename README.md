@@ -8,7 +8,7 @@ Search world countries by country name, capital name or official language. Look 
 
 ## See Demo
 
-[DEMO](https://microieva.github.io/countries-and-weather/)
+[DEMO](https://sheltered-eyrie-21915.herokuapp.com/)
 
 
 ## Authors
