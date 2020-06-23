@@ -11,7 +11,7 @@ class WeatherComponent extends Component {
 
     componentDidMount() {    
         let city = this.props.countries[0].capital    
-        let urlWeather= `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=465aec3114095a5da71608a731eea492`
+        let urlWeather= `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=465aec3114095a5da71608a731eea492`
         
         fetch(urlWeather)
             .then(response => response.json())
