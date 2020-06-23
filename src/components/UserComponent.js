@@ -25,6 +25,7 @@ const UserComponent = ({
                 
             </div>
             <div className="ui-container">
+                <p style={{color:"orange"}}>Search for one specific country, see current weather!</p>
                 <input className="user-input" 
                     type="text" 
                     placeholder="Search countries by name, capital or language"

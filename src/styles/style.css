@@ -50,6 +50,11 @@ body {
     background: #F7F7F7;
 }
 
+.ui-container>p {
+    margin-top: 2rem;
+    color: orange;
+}
+
 input {
     min-width: 50%;
     border-radius: 30px;
@@ -57,7 +62,7 @@ input {
     outline: none;
     height: 2.5rem;
     text-indent: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #F2A93B;
     font-weight: 900;
     font-size: 1.5rem;

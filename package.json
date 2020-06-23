@@ -2,11 +2,13 @@
   "name": "countries-and-weather",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-      "/api": {
-        "target": "https://sheltered-eyrie-21915.herokuapp.com/",
-        "pathRewrite": {
-          "^/api": "/"
+  "proxies": {
+    "proxy": {
+        "/api": {
+          "target": "https://sheltered-eyrie-21915.herokuapp.com/",
+          "pathRewrite": {
+            "^/api": "/"
+        }
       }
     }
   },
