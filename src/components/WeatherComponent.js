@@ -46,7 +46,7 @@ class WeatherComponent extends Component {
             temp_min, 
             temp_max
         } = this.state.weather
-        //let desc = `${description.charAt(0).toUpperCase()} + ${description.slice(1)}`
+        //let descrptn = `${description.charAt(0).toUpperCase()} + ${description.slice(1)}`
 
         return (
             <div className='weather'>
