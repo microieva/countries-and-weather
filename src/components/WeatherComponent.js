@@ -54,10 +54,10 @@ class WeatherComponent extends Component {
                 <div className='info-container'>
                     <p className='current-temp'>{Math.floor(temp/10)} °C</p>
                     <div className='info-text'>
-                        <p>Location: <spam>{name}</spam></p>
-                        <p>Description: <spam>{description}</spam></p>
-                        <p>Wind speed: <spam>{speed} m/s</spam></p>
-                        <p>Min/Max: <spam>{Math.floor(temp_min/10)}/{Math.floor(temp_max/10)} °C</spam></p>
+                        <p>Location: <span>{name}</span></p>
+                        <p>Description: <span>{description}</span></p>
+                        <p>Wind speed: <span>{speed} m/s</span></p>
+                        <p>Min/Max: <span>{Math.floor(temp_min/10)}/{Math.floor(temp_max/10)} °C</span></p>
                     </div>    
                 </div>
             </div>

@@ -16,12 +16,12 @@ const CountryComponent = ({
                 </div>
                 <div className='name'>{name}</div>
                 <div className='country-info'>
-                    <p>Capital:  <spam>{capital}</spam></p>
-                    <p>Population:  <spam>{population}</spam></p>
+                    <p>Capital:  <span>{capital}</span></p>
+                    <p>Population:  <span>{population}</span></p>
                     {languages.length > 1 ?
-                        <p>Languages: <spam>{languages.map(lang => lang.name).join(", ")}</spam></p>
+                        <p>Languages: <span>{languages.map(lang => lang.name).join(", ")}</span></p>
                     :
-                        <p>Language: <spam>{languages[0].name}</spam></p>
+                        <p>Language: <span>{languages[0].name}</span></p>
                     }
                 </div>    
             </div>

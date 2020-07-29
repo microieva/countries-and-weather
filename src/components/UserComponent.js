@@ -1,13 +1,13 @@
 import React from 'react';
 
 const UserComponent = ({
-    onRefresh,
     countries, 
     onChange, 
     onNameClick, 
     onCapitalClick, 
     onLanguageClick, 
-    searchWord
+    searchWord,
+    onRefresh
 }) => {
 
     return (
@@ -44,11 +44,11 @@ const UserComponent = ({
                         onClick={onLanguageClick}>
                             LANGUAGE
                     </button>
-                    {/* <button 
+                    <button 
                         className='btn'
                         onClick={onRefresh}>
                         <i className="fa fa-refresh" aria-hidden="true"></i>
-                    </button> */}
+                    </button>
                 </div>
             </div> 
         </div>      

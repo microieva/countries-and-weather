@@ -23,10 +23,30 @@ class App extends Component {
         })
     }
 
-    searchByName = () => {
+    // search = () => {
+    //     const {countries, searchWord} = this.state;
+    //     const filteredCountries = countries
+    //       .filter(country => 
+    //         country.name.toLowerCase().indexOf(searchWord.toLowerCase())>=0
+    //         ||
+    //         country.capital.toLowerCase().indexOf(searchWord.toLowerCase()) >=0
+    //         ||
+    //         country.languages
+    //             .map(lang => lang.name).join(", ")
+    //             .toLowerCase().indexOf(searchWord.toLowerCase()) >=0 
+    //       )
+          
+    //     this.setState({
+    //         countries: filteredCountries,
+            
+    //     })
+    //     console.log(searchWord)
+    // }
+
+     searchByName = () => {
         const {countries, searchWord} = this.state;
         const filteredCountries = countries.filter((country => 
-            country.name.toUpperCase().startsWith(searchWord.toUpperCase())
+          country.name.toUpperCase().startsWith(searchWord.toUpperCase())
         ));
         
         this.setState({
@@ -60,14 +80,25 @@ class App extends Component {
     }
 
     handleChange = e => {
-        e.preventDefault();   
+        e.preventDefault(); 
         this.setState({
-            searchWord: e.target.value
+            searchWord: e.target.value,    
         })
     }
 
-    render(){
+    onRefresh = () =>{
+        const urlCountries = 'https://restcountries.eu/rest/v2/all'
+        fetch(urlCountries)
+        .then(response => response.json())
+        .then(data => {
+            this.setState({
+                countries: [...data],
+            })
+        })
         
+    }
+
+    render(){   
         const { countries, searchWord } = this.state;
         const countriesList = countries.map((country, i) =>(
             <CountryComponent 
@@ -92,9 +123,10 @@ class App extends Component {
                 <UserComponent 
                     countries={countriesList}
                     onChange={this.handleChange}
-                    onNameClick={this.searchByName}
+                    onNameClick={this.handleChange}
                     onCapitalClick={this.searchByCapital}
                     onLanguageClick={this.searchByLanguage}
+                    onRefresh={this.onRefresh}
                     value={searchWord}/>
                 <div className='display-container'>
                     <div className='countries-container'>
