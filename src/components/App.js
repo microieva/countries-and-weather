@@ -4,8 +4,8 @@ import CountryComponent from './CountryComponent';
 import WeatherComponent from './WeatherComponent';
 
 class App extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             countries:[],
             searchWord:'',   
@@ -23,32 +23,12 @@ class App extends Component {
         })
     }
 
-    // search = () => {
-    //     const {countries, searchWord} = this.state;
-    //     const filteredCountries = countries
-    //       .filter(country => 
-    //         country.name.toLowerCase().indexOf(searchWord.toLowerCase())>=0
-    //         ||
-    //         country.capital.toLowerCase().indexOf(searchWord.toLowerCase()) >=0
-    //         ||
-    //         country.languages
-    //             .map(lang => lang.name).join(", ")
-    //             .toLowerCase().indexOf(searchWord.toLowerCase()) >=0 
-    //       )
-          
-    //     this.setState({
-    //         countries: filteredCountries,
-            
-    //     })
-    //     console.log(searchWord)
-    // }
-
      searchByName = () => {
         const {countries, searchWord} = this.state;
         const filteredCountries = countries.filter((country => 
           country.name.toUpperCase().startsWith(searchWord.toUpperCase())
         ));
-        
+        console.log("searchByName:", searchWord, filteredCountries)
         this.setState({
             countries: filteredCountries
         })
@@ -59,7 +39,7 @@ class App extends Component {
         const filteredCountries = countries.filter((country => 
             country.capital.toUpperCase().startsWith(searchWord.toUpperCase())
         ));
-        
+        console.log("capital:", searchWord, filteredCountries)
         this.setState({
             countries: filteredCountries
         })
@@ -73,7 +53,7 @@ class App extends Component {
                 .map(lang => lang.name).join(", ")
                 .toUpperCase().includes(searchWord.toUpperCase());    
         })
-        
+        console.log("searchByLanguage:", searchWord, filteredCountries)
         this.setState({
             countries: filteredCountries
         })
@@ -94,8 +74,7 @@ class App extends Component {
             this.setState({
                 countries: [...data],
             })
-        })
-        
+        })    
     }
 
     render(){   
@@ -123,7 +102,7 @@ class App extends Component {
                 <UserComponent 
                     countries={countriesList}
                     onChange={this.handleChange}
-                    onNameClick={this.handleChange}
+                    onNameClick={this.searchByName}
                     onCapitalClick={this.searchByCapital}
                     onLanguageClick={this.searchByLanguage}
                     onRefresh={this.onRefresh}
