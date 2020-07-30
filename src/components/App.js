@@ -66,13 +66,14 @@ class App extends Component {
         })
     }
 
-    onRefresh = () =>{
+    onRefresh = (e) =>{
         const urlCountries = 'https://restcountries.eu/rest/v2/all'
         fetch(urlCountries)
         .then(response => response.json())
         .then(data => {
             this.setState({
                 countries: [...data],
+                searchWord: ''
             })
         })    
     }
@@ -106,7 +107,7 @@ class App extends Component {
                     onCapitalClick={this.searchByCapital}
                     onLanguageClick={this.searchByLanguage}
                     onRefresh={this.onRefresh}
-                    value={searchWord}/>
+                    searchWord={searchWord}/>
                 <div className='display-container'>
                     <div className='countries-container'>
                         {countriesList}
